@@ -14,7 +14,9 @@ const Footer = () => {
             <ul className={styles.order}>
               {" "}
               <li className={styles.list} key={item?.id}>
-                {item?.list}
+                <a href={item?.link} className={styles.link}>
+                  {item?.list}
+                </a>
               </li>
             </ul>
           ))}

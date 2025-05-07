@@ -5,6 +5,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import products from "../asset/products.png";
+import ev from "../../src/asset/ev.png"
 export const iconData = [
   {
     id: 1,
@@ -63,7 +64,7 @@ export const menuData = [
 export const productsData = [
   {
     id: 1,
-    img: products,
+    img: ev,
     link: "",
     title: "EV",
   },

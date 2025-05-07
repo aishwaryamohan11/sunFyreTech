@@ -11,32 +11,27 @@ const HeroSection = () => {
         <div className={styles.left}>
           {/* <h1 className={styles.subtitle}>TEDI India</h1> */}
           <h1 className={styles.title}>
-            Shaping the Future of Vehicle Safety and Automotive Solutions{" "}
+            Powering the Future with Innovation and Sustainability
           </h1>
-          <h4 className={styles.minititle}>ISO 9001:2015 Certified Company</h4>
+          {/* <h4 className={styles.minititle}>ISO 9001:2015 Certified Company</h4> */}
           <div className={styles.desc}>
-            <p className={styles.descTop}>
-              Founded in 2012, TEDI India Pvt Ltd is an ISO 9001:2015 and ISO/TS
-              16949:2009 certified company that has been a key player in the
-              automotive industry for over a decade. Our focus is on
-              manufacturing and marketing a wide range of Vehicle Safety
-              products and Automotive solutions. We proudly serve both
-              government and private vehicles, offering products like Auto
-              Dippers, Speed Limiting Devices, GPS Vehicle Location Tracking
-              Systems, Vehicle CCTV Cameras, PUC-Vehicle Emission Testing
-              Equipment&apos;s, HSRP-High Security Registration Number Plates,
-              Vehicle Fire Safety Products that adhere to the highest safety
-              standards set by ICAT and ARAI.
-            </p>
+            {/* <p className={styles.descTop}>margin-top: 555px;</p> */}
             <p className={styles.descBottom}>
-              TEDI India holds 35% market share in road safety and Vehicle
-              Safety products and is expanding its offerings. We launched TEDI
-              Electric Vehicles, entering the electric two-wheeler market with
-              sustainable, high-performance designs. Our 600 employees and
-              extensive distributor network provide excellent customer service.
-              Committed to enhancing road safety, TEDI India invests in research
-              and innovation to meet the automotive sector&apos;s evolving
-              needs.
+              At SunFyreTech, we're driving innovation across multiple essential
+              technologies to power a smarter, greener future. Based in India,
+              we specialize in
+              <span className={styles.span}>
+                {" "}
+                electric scooter development, CCTV installation and repair, and
+                solar energy solutions
+              </span>
+              . Whether it's building eco-friendly mobility with our EV
+              scooters, securing homes and businesses with reliable surveillance
+              systems, or harnessing clean energy through solar panel
+              installations, our mission is to deliver high-quality, affordable
+              technology that makes a difference. At the heart of SunFyreTech is
+              a passionate team committed to sustainability, security, and
+              service excellence.
             </p>
           </div>
         </div>

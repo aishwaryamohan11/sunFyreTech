@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import styles from "./mobileNavBar.module.scss";
 import logo from "../../asset/logo/sunFyreLogo.png";
@@ -31,17 +32,17 @@ const MobileNavBar = () => {
   //     };
   //   }, []);
 
-  const handleContactClick = (e) => {
-    e.preventDefault();
-    // if (router.pathname === "/") {
-    //   document
-    //     .getElementById("contactUs")
-    //     ?.scrollIntoView({ behavior: "smooth" });
-    // } else {
-    //   router.push("/#contactUs");
-    // }
-    setOpen(false);
-  };
+  // const handleContactClick = (e) => {
+  //   e.preventDefault();
+  //   // if (router.pathname === "/") {
+  //   //   document
+  //   //     .getElementById("contactUs")
+  //   //     ?.scrollIntoView({ behavior: "smooth" });
+  //   // } else {
+  //   //   router.push("/#contactUs");
+  //   // }
+  //   setOpen(false);
+  // };
   return (
     <div className={styles.mobileContainer}>
       <div className={styles.mobileWrapper}>
@@ -80,15 +81,15 @@ const MobileNavBar = () => {
                         key={nav.id}
                         onClick={() => setOpen(false)}
                       >
-                        {nav.list === "Contact Us" ? (
+                        {/* {nav.list === "Contact Us" ? (
                           <a href={nav.link} onClick={handleContactClick}>
                             {nav.list}
                           </a>
-                        ) : (
+                        ) : ( */}
                           <a className={styles.link} href={nav.link}>
                             {nav.list}
                           </a>
-                        )}
+                        {/* )} */}
                       </li>
                     ))}
                   </ul>
