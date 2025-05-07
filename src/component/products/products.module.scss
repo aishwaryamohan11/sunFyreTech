@@ -1,0 +1,95 @@
+.container {
+  //   background-color: antiquewhite;
+  padding: 3%;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    row-gap: 50px;
+    // background-color: aqua;
+    .title {
+      font-size: 45px;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: bold;
+      text-align: center;
+    }
+    .cardAdjust {
+      display: flex;
+      justify-content: center;
+      //   align-items: center;
+
+    //   background-color: #dda0a0;
+      .cardContainer {
+        display: flex;
+        column-gap: 32px;
+        max-width: 1546px;
+        width: 100%;
+        justify-content: space-between;
+        // align-items: center;
+        // background-color: rgb(221, 48, 48);
+
+        .cardWrapper {
+          background-color: rgb(221, 221, 221);
+          border-radius: 12px;
+          width: 300px;
+          .top {
+            padding: 6%;
+            height: 600px;
+            //   width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            .topTop {
+              background-color: aquamarine;
+              // width: 250px;
+              height: 450px;
+
+              .img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+            .topBottom {
+              font-size: 28px;
+              font-family: "Trebuchet MS", "Lucida Sans Unicode",
+                "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+              font-weight: bolder;
+              text-align: center;
+            }
+          }
+          .bottom {
+            background-color: black;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0px 0px 12px 12px;
+            .button {
+              color: white;
+              font-size: 30px;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    .wrapper {
+      .cardAdjust {
+        .cardContainer {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          row-gap: 32px;
+        }
+      }
+    }
+  }
+}
