@@ -6,52 +6,31 @@ import styles from "./signUpForm.module.scss";
 import { Button } from "@mui/material";
 
 const SignUpForm = () => {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
   const [emailError, setEmailError] = useState("");
   const [phoneError, setPhoneError] = useState("");
 
   const validateEmail = (value) => {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!regex.test(value)) {
-      setEmailError("Please enter a valid email address");
-    } else {
-      setEmailError("");
-    }
+    setEmailError(regex.test(value) ? "" : "Please enter a valid email address");
   };
 
   const validatePhone = (value) => {
     const regex = /^[0-9]{10}$/;
-    if (!regex.test(value)) {
-      setPhoneError("Phone number must be exactly 10 digits");
-    } else {
-      setPhoneError("");
-    }
-  };
-
-  const handleEmailChange = (e) => {
-    const value = e.target.value;
-    setEmail(value);
-    validateEmail(value);
-  };
-
-  const handlePhoneChange = (e) => {
-    const value = e.target.value;
-    setPhone(value);
-    validatePhone(value);
+    setPhoneError(regex.test(value) ? "" : "Phone number must be exactly 10 digits");
   };
 
   const handleSubmit = () => {
-    const message = `Hi`;
     const whatsappNumber = "+919361266030";
-    const encodedMessage = encodeURIComponent(message);
-    window.open(
-      `https://wa.me/${whatsappNumber}?text=${encodedMessage}`,
-      "_blank"
-    );
+    const fullMessage = `Hi, I'm ${name}.\n\nHere are my details:\n📧 Email: ${email}\n📱 Phone: ${phone}\n📝 Message: ${message}`;
+    const encodedMessage = encodeURIComponent(fullMessage);
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, "_blank");
   };
 
-  const isFormValid = email && phone && !emailError && !phoneError;
+  const isFormValid = name && email && phone && !emailError && !phoneError;
 
   return (
     <div className={styles.container}>
@@ -63,12 +42,20 @@ const SignUpForm = () => {
           noValidate
           autoComplete="off"
         >
-          <TextField label="Name" variant="standard" />
+          <TextField
+            label="Name"
+            variant="standard"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
           <TextField
             label="Email ID"
             variant="standard"
             value={email}
-            onChange={handleEmailChange}
+            onChange={(e) => {
+              setEmail(e.target.value);
+              validateEmail(e.target.value);
+            }}
             error={!!emailError}
             helperText={emailError}
           />
@@ -76,11 +63,21 @@ const SignUpForm = () => {
             label="Phone Number"
             variant="standard"
             value={phone}
-            onChange={handlePhoneChange}
+            onChange={(e) => {
+              setPhone(e.target.value);
+              validatePhone(e.target.value);
+            }}
             error={!!phoneError}
             helperText={phoneError}
           />
-          <TextField label="Message" multiline rows={4} variant="standard" />
+          <TextField
+            label="Message"
+            multiline
+            rows={4}
+            variant="standard"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+          />
         </Box>
         <div className={styles.buttonContainer}>
           <Button

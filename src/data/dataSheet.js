@@ -1,11 +1,11 @@
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import CallIcon from "@mui/icons-material/Call";
-import FacebookIcon from "@mui/icons-material/Facebook";
+// import FacebookIcon from "@mui/icons-material/Facebook";
 import EmailIcon from "@mui/icons-material/Email";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import YouTubeIcon from "@mui/icons-material/YouTube";
+// import YouTubeIcon from "@mui/icons-material/YouTube";
 import products from "../asset/products.png";
-import ev from "../../src/asset/ev.png"
+import ev from "../../src/asset/ev.png";
 export const iconData = [
   {
     id: 1,
@@ -17,11 +17,11 @@ export const iconData = [
     icon: <CallIcon style={{ fontSize: "40px" }} />,
     link: "tel:+9361266030",
   },
-  {
-    id: 3,
-    icon: <FacebookIcon style={{ fontSize: "40px" }} />,
-    link: "",
-  },
+  // {
+  //   id: 3,
+  //   icon: <FacebookIcon style={{ fontSize: "40px" }} />,
+  //   link: "",
+  // },
   {
     id: 4,
     icon: <EmailIcon style={{ fontSize: "40px" }} />,
@@ -32,17 +32,17 @@ export const iconData = [
     icon: <InstagramIcon style={{ fontSize: "40px" }} />,
     link: "https://www.instagram.com/p/DJHU4QlTejf/?igsh=bXZsMnp1cGFycG9q",
   },
-  {
-    id: 6,
-    icon: <YouTubeIcon style={{ fontSize: "40px" }} />,
-    link: "",
-  },
+  // {
+  //   id: 6,
+  //   icon: <YouTubeIcon style={{ fontSize: "40px" }} />,
+  //   link: "",
+  // },
 ];
 export const menuData = [
   {
     id: 1,
     list: "Home",
-    // link: "https://wa.me/7339102942?text=Hi",
+    link: "#home",
   },
   {
     id: 2,

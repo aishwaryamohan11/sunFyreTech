@@ -12,7 +12,7 @@ const showroomData = [
 
 const LandingPage = () => {
   return (
-    <div
+    <div id="home"
       style={{
         marginTop: "130px",
         // position: "relative",
