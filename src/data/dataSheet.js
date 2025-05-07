@@ -4,8 +4,10 @@ import CallIcon from "@mui/icons-material/Call";
 import EmailIcon from "@mui/icons-material/Email";
 import InstagramIcon from "@mui/icons-material/Instagram";
 // import YouTubeIcon from "@mui/icons-material/YouTube";
-import products from "../asset/products.png";
+// import products from "../asset/products.png";
 import ev from "../../src/asset/ev.png";
+import cctv from "../../src/asset/cctv.jpg";
+import solar from "../../src/asset/solar.jpg";
 export const iconData = [
   {
     id: 1,
@@ -65,19 +67,19 @@ export const productsData = [
   {
     id: 1,
     img: ev,
-    link: "",
+    // link: "",
     title: "EV",
   },
   {
     id: 2,
-    img: products,
-    link: "",
+    img: solar,
+    // link: "",
     title: "SOLAR",
   },
   {
     id: 3,
-    img: products,
-    link: "",
+    img: cctv,
+    // link: "",
     title: "CCTV",
   },
 ];
