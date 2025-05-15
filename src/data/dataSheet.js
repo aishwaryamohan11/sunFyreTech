@@ -6,8 +6,8 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 // import YouTubeIcon from "@mui/icons-material/YouTube";
 // import products from "../asset/products.png";
 import ev from "../../src/asset/ev.png";
-import cctv from "../../src/asset/cct.jpg";
-import solar from "../../src/asset/sola.jpg";
+import cctv from "../../src/asset/cctvproduct.jpg";
+import solar from "../../src/asset/solar.jpg";
 export const iconData = [
   {
     id: 1,

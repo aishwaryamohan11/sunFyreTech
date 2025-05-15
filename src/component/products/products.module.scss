@@ -13,44 +13,40 @@
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       font-weight: bold;
       text-align: center;
+      color: #ffb43c;
     }
     .cardAdjust {
       display: flex;
       justify-content: center;
-      //   align-items: center;
-
-      //   background-color: #dda0a0;
       .cardContainer {
         display: flex;
         column-gap: 32px;
         max-width: 1546px;
         width: 100%;
+        // background-color: aqua;
         flex-wrap: wrap;
-        // width: fit-content;
         justify-content: space-between;
-        // align-items: center;
-        // background-color: rgb(221, 48, 48);
         gap: 55px;
         .cardWrapper {
-          // background-color: rgb(221, 221, 221);
-          // border-radius: 12px;
-          // width: fit-content;
+          background-color: #fff;
           display: flex;
           flex-direction: column;
           row-gap: 55px;
+          border: 1px solid black;
+          // max-width: 390px;
+          // width: 100%;
+          border-radius: 12px;
+
           .top {
-            // background-color: antiquewhite;
-            // padding: 6%;
-            // height: 600px;
-            //   width: 100%;
             display: flex;
             flex-direction: column;
             row-gap: 32px;
             justify-content: space-around;
+            padding: 12px;
             .topTop {
               // background-color: aquamarine;
-              // max-width: 500px;
-              // width: 100%; //
+              max-width: 500px;
+              width: 100%;
               //  width: fit-content;
               height: 450px;
               .img {
@@ -103,10 +99,8 @@
             justify-content: center;
             align-items: center;
             row-gap: 22px;
-            .top {
-              .topTop {
-                // max-width: 420px;
-              }
+            .bottom {
+              width: 100%;
             }
           }
         }

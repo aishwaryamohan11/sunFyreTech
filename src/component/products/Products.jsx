@@ -22,9 +22,9 @@ const Products = () => {
                   </div>
                   <div className={styles.topBottom}>{item?.title}</div>
                 </div>{" "}
-                {/* <div className={styles.bottom}>
+                <div className={styles.bottom}>
                   <div className={styles.button}>Know More</div>
-                </div> */}
+                </div>
               </div>
             ))}
           </div>

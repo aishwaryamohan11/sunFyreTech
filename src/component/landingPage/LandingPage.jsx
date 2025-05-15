@@ -12,7 +12,8 @@ const showroomData = [
 
 const LandingPage = () => {
   return (
-    <div id="home"
+    <div
+      id="home"
       style={{
         marginTop: "130px",
         // position: "relative",
@@ -39,7 +40,7 @@ const LandingPage = () => {
           color: "black",
         }}
       >
-        SunFyre Tech
+        SUNFYRE TECH
       </h2>
       <p
         style={{

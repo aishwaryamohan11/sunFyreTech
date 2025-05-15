@@ -9,13 +9,12 @@ const HeroSection = () => {
           <img src={aboutUsImg} alt="aboutPage" className={styles.image} />
         </div>
         <div className={styles.left}>
-          {/* <h1 className={styles.subtitle}>TEDI India</h1> */}
           <h1 className={styles.title}>
-            Powering the Future with Innovation and Sustainability
+            Powering the
+            <span style={{ color: "#ffb43c" }}> Future with Innovation </span>
+            and Sustainability
           </h1>
-          {/* <h4 className={styles.minititle}>ISO 9001:2015 Certified Company</h4> */}
           <div className={styles.desc}>
-            {/* <p className={styles.descTop}>margin-top: 555px;</p> */}
             <p className={styles.descBottom}>
               At SunFyreTech, we're driving innovation across multiple essential
               technologies to power a smarter, greener future. Based in India,

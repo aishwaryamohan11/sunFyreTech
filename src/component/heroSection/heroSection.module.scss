@@ -33,28 +33,16 @@
       row-gap: 15px;
       letter-spacing: 0.04em;
       // flex:1;
-      .subtitle {
-        text-align: left;
-        font-size: 1.5rem;
-        // font-weight: $subTitleWeight;
-        color: #1e39bf;
-      }
+
       .title {
-        color: #00003d;
+        color: black;
         // font-size: $secondaryTitleSize;
         // font-weight: $secondarysubTitleWeight;
         line-height: 56px;
-        text-align: left;
         max-width: 720px;
         width: 100%;
-        letter-spacing: 0.04em;
       }
-      .minititle {
-        color: #1e39bf;
-        // font-size: $descSize;
-        // font-weight: $buttonWeight;
-        line-height: 32px;
-      }
+
       .desc {
         display: flex;
         flex-direction: column;
@@ -71,6 +59,7 @@
         .span {
           font-size: 25px;
           font-weight: bold;
+          color: #ffb43c;
         }
       }
     }
