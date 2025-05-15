@@ -29,6 +29,7 @@ const Footer = () => {
               href="https://wa.me/7339102942?text=Hi"
               target="_blank"
               rel="noreferrer"
+              style={{color:"inherit"}}
             >
               Aishwarya
             </a>{" "}

@@ -1,22 +1,15 @@
-import CommanNavBar from "./component/CommanNavBar/CommanNavBar.jsx";
-import ContactUs from "./component/contactUs/ContactUs.jsx";
-import Footer from "./component/footer/Footer.jsx";
-import HeroSection from "./component/heroSection/HeroSection";
-import LandingPage from "./component/landingPage/LandingPage.jsx";
-import Products from "./component/products/Products.jsx";
-import SignUpForm from "./component/signUpForm/SignUpForm.jsx";
+import Home from "./component/home/Home.jsx";
+import ProductDetail from "./component/productDetail/ProductDetail.jsx";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div style={{ backgroundColor: "white" }}>
-      <CommanNavBar />
-      <LandingPage />
-      <HeroSection />
-      <Products />
-      <ContactUs />
-      <SignUpForm />
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products/:slug" element={<ProductDetail />} />
+      </Routes>
+    </Router>
   );
 }
 

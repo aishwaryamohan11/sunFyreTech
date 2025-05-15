@@ -1,7 +1,10 @@
 import React from "react";
 import styles from "./products.module.scss";
+import { useNavigate } from "react-router-dom";
 import { productsData } from "../../data/dataSheet";
 const Products = () => {
+  const navigate = useNavigate();
+
   return (
     <div className={styles.container} id="products">
       <div className={styles.wrapper}>
@@ -9,7 +12,12 @@ const Products = () => {
         <div className={styles.cardAdjust}>
           <div className={styles.cardContainer}>
             {productsData?.map((item) => (
-              <div className={styles.cardWrapper}>
+              <div
+                className={styles.cardWrapper}
+                key={item.id}
+                onClick={() => navigate(`/products/${item.link.toLowerCase()}`)}
+                style={{ cursor: "pointer", textAlign: "center" }}
+              >
                 {" "}
                 <div className={styles.top}>
                   <div className={styles.topTop}>
