@@ -31,22 +31,22 @@
           background-color: #fff;
           display: flex;
           flex-direction: column;
-          row-gap: 55px;
+          row-gap: 25px;
           border: 1px solid black;
           // max-width: 390px;
           // width: 100%;
           border-radius: 12px;
-
+          
           .top {
             display: flex;
             flex-direction: column;
             row-gap: 32px;
             justify-content: space-around;
-            padding: 12px;
+            padding: 22px;
             .topTop {
               // background-color: aquamarine;
-              max-width: 500px;
-              width: 100%;
+              // max-width: 500px;
+              width: fit-content;
               //  width: fit-content;
               height: 450px;
               .img {
@@ -99,6 +99,9 @@
             justify-content: center;
             align-items: center;
             row-gap: 22px;
+            .top{
+              padding: 12px;
+            }
             .bottom {
               width: 100%;
             }

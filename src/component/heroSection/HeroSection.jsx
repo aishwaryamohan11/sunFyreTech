@@ -11,7 +11,7 @@ const HeroSection = () => {
         <div className={styles.left}>
           <h1 className={styles.title}>
             Powering the
-            <span style={{ color: "#ffb43c" }}> Future with Innovation </span>
+            <span style={{ color: "#ffb43c" ,fontSize:"30px"}}> Future with Innovation </span>
             and Sustainability
           </h1>
           <div className={styles.desc}>

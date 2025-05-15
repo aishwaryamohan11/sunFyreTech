@@ -1,0 +1,36 @@
+.container {
+  width: 100%;
+
+  .wrapper {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+
+    .infoContainer {
+      z-index: 1;
+      .minHeading {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      .desc1 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .container {
+    .wrapper {
+      .infoContainer {
+        .minHeading {
+          font-size: 22px;
+        }
+        .desc1{
+           font-size: 18px; 
+        }
+      }
+    }
+  }
+}

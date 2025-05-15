@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import styles from "./mobileNavBar.module.scss";
 import logo from "../../asset/logo/sunFyreLogo.png";
@@ -6,43 +5,24 @@ import { IconButton } from "@mui/material";
 import CancelOutlinedIcon from "@mui/icons-material/CancelOutlined";
 import AutoAwesomeMosaicRoundedIcon from "@mui/icons-material/AutoAwesomeMosaicRounded";
 import { menuData } from "../../data/dataSheet";
-
-// const navData = [
-//   { id: 1, title: "Home", link: "/" },
-//   { id: 2, title: "About Us", link: "/aboutUs" },
-//   { id: 3, title: "Products", link: "/products" },
-//   { id: 4, title: "Downloads", link: "/downloads" },
-//   { id: 5, title: "Contact Us", link: "#contactUs" },
-// ];
+import { useNavigate, useLocation } from "react-router-dom";
 
 const MobileNavBar = () => {
-  //   const [scrollPosition, setScrollPosition] = useState(0);
   const [open, setOpen] = useState(false);
-  //   const router = useRouter();
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  //   useEffect(() => {
-  //     const handleScroll = () => {
-  //       const position = window.pageYOffset;
-  //       setScrollPosition(position);
-  //     };
-
-  //     window.addEventListener("scroll", handleScroll);
-  //     return () => {
-  //       window.removeEventListener("scroll", handleScroll);
-  //     };
-  //   }, []);
-
-  // const handleContactClick = (e) => {
-  //   e.preventDefault();
-  //   // if (router.pathname === "/") {
-  //   //   document
-  //   //     .getElementById("contactUs")
-  //   //     ?.scrollIntoView({ behavior: "smooth" });
-  //   // } else {
-  //   //   router.push("/#contactUs");
-  //   // }
-  //   setOpen(false);
-  // };
+  const handleClick = (hash) => {
+    setOpen(false);
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollTo: hash } });
+    } else {
+      const target = document.getElementById(hash.replace("#", ""));
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
   return (
     <div className={styles.mobileContainer}>
       <div className={styles.mobileWrapper}>
@@ -79,17 +59,12 @@ const MobileNavBar = () => {
                       <li
                         className={styles.nav}
                         key={nav.id}
-                        onClick={() => setOpen(false)}
+                        // onClick={() => setOpen(false, nav.link)}
+                        onClick={() => handleClick(nav.link)}
                       >
-                        {/* {nav.list === "Contact Us" ? (
-                          <a href={nav.link} onClick={handleContactClick}>
-                            {nav.list}
-                          </a>
-                        ) : ( */}
-                          <a className={styles.link} href={nav.link}>
-                            {nav.list}
-                          </a>
-                        {/* )} */}
+                        <a className={styles.link} href={nav.link}>
+                          {nav.list}
+                        </a>
                       </li>
                     ))}
                   </ul>

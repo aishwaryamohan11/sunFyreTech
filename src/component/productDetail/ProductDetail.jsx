@@ -6,6 +6,7 @@ import ContactUs from "../contactUs/ContactUs";
 import SignUpForm from "../signUpForm/SignUpForm";
 import Footer from "../footer/Footer";
 import Specification from "../specification/Specification";
+import ProductHero from "../productHero/ProductHero";
 
 const ProductDetail = () => {
   const { slug } = useParams();
@@ -16,6 +17,7 @@ const ProductDetail = () => {
   return (
     <div>
       <CommanNavBar />
+      <ProductHero />
       <Specification product={product} />
       <ContactUs />
       <SignUpForm />

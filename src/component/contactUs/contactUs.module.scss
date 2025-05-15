@@ -47,7 +47,7 @@
 
 @media only screen and (max-width: 600px) {
   .container {
-  
+    padding: 15% 10%;
     .wrapper {
       flex-direction: column;
       // background-color: aqua;
@@ -79,7 +79,7 @@
         align-items: flex-start;
         // max-width: 300px;
         width: 100%;
-        background-color: #e82f2f;
+        // background-color: #e82f2f;
       }
 
       .mapWrapper {
