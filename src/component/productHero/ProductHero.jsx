@@ -1,14 +1,18 @@
 import React from "react";
 import InfoCard from "../infoCard/InfoCard";
-import solarhero from "../../asset/product/solarhero.jpg";
 import styles from "./productHero.module.scss";
 
-const ProductHero = () => {
+const ProductHero = ({ product }) => {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
         <div className={styles.left}>
-          <img src={solarhero} alt="solarhero" className={styles.img} />
+          <img src={product?.fullimg} alt="solarhero" className={styles.img} />
+          <img
+            src={product?.mbimg}
+            alt="solarhero"
+            className={styles.mbimg}
+          />
         </div>
         <div className={styles.right}>
           <InfoCard

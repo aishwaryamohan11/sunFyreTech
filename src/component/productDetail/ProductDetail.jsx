@@ -1,4 +1,3 @@
-// components/ProductDetail.js
 import { useParams } from "react-router-dom";
 import { productsData } from "../../data/dataSheet";
 import CommanNavBar from "../CommanNavBar/CommanNavBar";
@@ -17,7 +16,7 @@ const ProductDetail = () => {
   return (
     <div>
       <CommanNavBar />
-      <ProductHero />
+      <ProductHero product={product} />
       <Specification product={product} />
       <ContactUs />
       <SignUpForm />

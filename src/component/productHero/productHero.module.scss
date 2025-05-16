@@ -19,6 +19,9 @@
         height: 100%;
         object-fit: cover;
       }
+      .mbimg {
+        display: none;
+      }
     }
 
     .right {
@@ -52,7 +55,11 @@
         height: 50vh;
 
         .img {
-          object-fit: cover;
+          // object-fit: cover;
+          display: none;
+        }
+        .mbimg {
+          display: block;
         }
       }
     }

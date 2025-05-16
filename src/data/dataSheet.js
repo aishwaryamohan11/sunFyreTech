@@ -18,6 +18,12 @@ import agrisolar from "../asset/product/agrisolar.cms";
 import bikeev from "../asset/product/bikeev.png";
 import rickshaw from "../asset/product/rickshaw.jpg";
 import wasteev from "../asset/product/wasteev.jpg";
+import fullsolar from "../asset/product/solarhero.jpg";
+import mbsolar from "../asset/product/mbsolar.jpg";
+import fullev1 from "../asset/product/fullev1.bin";
+import fullcctv from "../asset/product/fullcctv.jpg";
+import mbcctv from "../asset/product/mbcctv.jpg";
+
 export const iconData = [
   {
     id: 1,
@@ -79,6 +85,8 @@ export const productsData = [
     img: ev,
     link: "EV",
     title: "EV",
+    fullimg: fullev1,
+    mbimg: fullev1,
     datas: [
       {
         id: 1,
@@ -128,6 +136,8 @@ export const productsData = [
     img: solar,
     link: "SOLAR",
     title: "SOLAR",
+    fullimg: fullsolar,
+    mbimg: mbsolar,
     datas: [
       {
         id: 1,
@@ -183,7 +193,8 @@ export const productsData = [
     img: cctv,
     link: "CCTV",
     title: "CCTV",
-
+    fullimg: fullcctv,
+    mbimg: mbcctv,
     datas: [
       {
         id: 1,
