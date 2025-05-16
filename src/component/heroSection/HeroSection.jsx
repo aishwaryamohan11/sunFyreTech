@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./heroSection.module.scss";
-import aboutUsImg from "../../asset/aboutus.png";
+import aboutUsImg from "../../asset/about.png";
 const HeroSection = () => {
   return (
     <div className={styles.container} id="aboutUs">
