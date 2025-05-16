@@ -1,8 +1,9 @@
 import React from "react";
-import ev from "../../asset/small ev.jpeg";
-import cctv from "../../asset/smallcctv.png";
+import ev from "../../asset/product/ev.jpg";
+import cctv from "../../asset/cctv.jpg";
 import solar from "../../asset/small solar.jpeg";
-import bg from "../../asset/landingbg.png";
+// import bg from "../../asset/landingbg.png"; // No longer needed
+import bgVideo from "../../asset/video.mp4"; // 🔄 Import your video here
 
 const showroomData = [
   { title: "EV", img: ev },
@@ -16,28 +17,43 @@ const LandingPage = () => {
       id="home"
       style={{
         marginTop: "130px",
-        // position: "relative",
-        backgroundImage: `url(${bg})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        height: "fit-content",
         position: "relative",
+        height: "fit-content",
+        overflow: "hidden",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        // alignItems: "flex-end", // Align content to bottom
-        justifyContent: "center", // Center horizontally
-        paddingBottom: "40px", // Spacing from bottom
+        justifyContent: "center",
+        paddingBottom: "40px",
       }}
     >
+      {/* 🔽 Background video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          zIndex: -1,
+        }}
+      >
+        <source src={bgVideo} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
       <h2
         style={{
           textAlign: "center",
           fontSize: "38px",
           marginBottom: "8px",
           fontWeight: "bold",
-          color: "black",
+          color: "white",
         }}
       >
         SUNFYRE TECH
@@ -47,11 +63,12 @@ const LandingPage = () => {
           textAlign: "center",
           fontSize: "22px",
           marginBottom: "32px",
-          color: "black",
+          color: "white",
         }}
       >
         Welcomes you
       </p>
+
       <div
         style={{
           display: "flex",
@@ -74,7 +91,7 @@ const LandingPage = () => {
               justifyContent: "space-between",
             }}
           >
-            <div style={{ height: "180px", width: "100%" }}>
+            <div style={{ height: "250px", width: "100%" }}>
               <img
                 src={item.img}
                 alt={item.title}
@@ -86,7 +103,7 @@ const LandingPage = () => {
               />
             </div>
 
-            <div style={{ padding: "16px" }}>
+            <div style={{ padding: "0px" }}>
               <h3 style={{ textAlign: "center" }}>{item.title}</h3>
             </div>
           </div>

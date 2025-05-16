@@ -11,7 +11,10 @@ const HeroSection = () => {
         <div className={styles.left}>
           <h1 className={styles.title}>
             Powering the
-            <span style={{ color: "#ffb43c" ,fontSize:"30px"}}> Future with Innovation </span>
+            <span style={{ color: "#ffb43c", fontSize: "30px" }}>
+              {" "}
+              Future with Innovation{" "}
+            </span>
             and Sustainability
           </h1>
           <div className={styles.desc}>
@@ -21,8 +24,8 @@ const HeroSection = () => {
               we specialize in
               <span className={styles.span}>
                 {" "}
-                electric scooter development, CCTV installation and repair, and
-                solar energy solutions
+                electric scooter development, CCTV installation, and solar
+                panel installation
               </span>
               . Whether it's building eco-friendly mobility with our EV
               scooters, securing homes and businesses with reliable surveillance
