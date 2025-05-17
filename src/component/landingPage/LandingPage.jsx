@@ -4,7 +4,7 @@ import cctv from "../../asset/cctv.jpg";
 import solar from "../../asset/small solar.jpeg";
 // import bg from "../../asset/landingbg.png"; // No longer needed
 import bgVideo from "../../asset/video.mp4"; // 🔄 Import your video here
-
+import styles from "./landingPage.module.scss";
 const showroomData = [
   { title: "EV", img: ev },
   { title: "Solar", img: solar },
@@ -55,6 +55,7 @@ const LandingPage = () => {
           fontWeight: "bold",
           color: "white",
         }}
+        className={styles.company}
       >
         SUNFYRE TECH
       </h2>
@@ -90,6 +91,7 @@ const LandingPage = () => {
               flexDirection: "column",
               justifyContent: "space-between",
             }}
+            className={styles.over}
           >
             <div style={{ height: "250px", width: "100%" }}>
               <img
