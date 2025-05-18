@@ -5,13 +5,17 @@ import solar from "../../asset/small solar.jpeg";
 // import bg from "../../asset/landingbg.png"; // No longer needed
 import bgVideo from "../../asset/video.mp4"; // 🔄 Import your video here
 import styles from "./landingPage.module.scss";
+import { useNavigate } from "react-router-dom";
+
 const showroomData = [
-  { title: "EV", img: ev },
-  { title: "Solar", img: solar },
-  { title: "CCTV", img: cctv },
+  { title: "EV", img: ev, link: "EV" },
+  { title: "Solar", img: solar, link: "SOLAR" },
+  { title: "CCTV", img: cctv, link: "CCTV" },
 ];
 
 const LandingPage = () => {
+  const navigate = useNavigate();
+
   return (
     <div
       id="home"
@@ -92,6 +96,7 @@ const LandingPage = () => {
               justifyContent: "space-between",
             }}
             className={styles.over}
+            onClick={() => navigate(`/products/${item.link.toLowerCase()}`)}
           >
             <div style={{ height: "250px", width: "100%" }}>
               <img

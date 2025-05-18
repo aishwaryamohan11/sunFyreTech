@@ -15,19 +15,26 @@ const SignUpForm = () => {
 
   const validateEmail = (value) => {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    setEmailError(regex.test(value) ? "" : "Please enter a valid email address");
+    setEmailError(
+      regex.test(value) ? "" : "Please enter a valid email address"
+    );
   };
 
   const validatePhone = (value) => {
     const regex = /^[0-9]{10}$/;
-    setPhoneError(regex.test(value) ? "" : "Phone number must be exactly 10 digits");
+    setPhoneError(
+      regex.test(value) ? "" : "Phone number must be exactly 10 digits"
+    );
   };
 
   const handleSubmit = () => {
     const whatsappNumber = "+919361266030";
     const fullMessage = `Hi, I'm ${name}.\n\nHere are my details:\n📧 Email: ${email}\n📱 Phone: ${phone}\n📝 Message: ${message}`;
     const encodedMessage = encodeURIComponent(fullMessage);
-    window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, "_blank");
+    window.open(
+      `https://wa.me/${whatsappNumber}?text=${encodedMessage}`,
+      "_blank"
+    );
   };
 
   const isFormValid = name && email && phone && !emailError && !phoneError;
@@ -43,12 +50,14 @@ const SignUpForm = () => {
           autoComplete="off"
         >
           <TextField
+            sx={{ "& > :not(style)": { fontSize: "25px" } }}
             label="Name"
             variant="standard"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
           <TextField
+            sx={{ "& > :not(style)": { fontSize: "25px" } }}
             label="Email ID"
             variant="standard"
             value={email}
@@ -60,6 +69,7 @@ const SignUpForm = () => {
             helperText={emailError}
           />
           <TextField
+            sx={{ "& > :not(style)": { fontSize: "25px" } }}
             label="Phone Number"
             variant="standard"
             value={phone}
@@ -71,6 +81,7 @@ const SignUpForm = () => {
             helperText={phoneError}
           />
           <TextField
+            sx={{ "& > :not(style)": { fontSize: "25px" } }}
             label="Message"
             multiline
             rows={4}

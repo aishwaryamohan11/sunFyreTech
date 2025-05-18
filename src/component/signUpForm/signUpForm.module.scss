@@ -1,11 +1,11 @@
 .container {
   padding: 3% 10%;
   .wrapper {
-    background-image: url("../../asset/logo/withbg.jpg"); // Adjust path if needed
+    background-image: url("../../asset/sign.jpg"); // Adjust path if needed
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-blend-mode: overlay;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-blend-mode: overlay;
 
     border-radius: 12px;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.506);
@@ -39,7 +39,7 @@
   .container {
     padding: 8% 10%;
     .wrapper {
-      background-image: url("../../asset/logo/mbbg.jpg"); // Adjust path if needed
+      background-image: url("../../asset/sign.jpg"); // Adjust path if needed
       padding: 8%;
       // background-color: yellow;
     }
