@@ -6,7 +6,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 // import YouTubeIcon from "@mui/icons-material/YouTube";
 // import products from "../asset/products.png";
 import ev from "../../src/asset/ev.png";
-import cctv from "../../src/asset/cctvfull.png";
+import cctv1 from "../../src/asset/cctv1.jpg";
 import solar from "../../src/asset/solarfull.png";
 import wificamera from "../asset/product/wificamera.jpg";
 import nightvesion from "../asset/product/nightvesion.jpg";
@@ -190,7 +190,7 @@ export const productsData = [
   },
   {
     id: 3,
-    img: cctv,
+    img: cctv1,
     link: "CCTV",
     title: "CCTV",
     fullimg: fullcctv,
